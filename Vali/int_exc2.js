@@ -1,5 +1,9 @@
 for(let i=1; i<101;i++){
-    if(i%3==0){
+    if(i%3==0 && i%5==0) {
+        console.log(i);
+        document.getElementById("Fizz").innerHTML+="FizzBuzz<br>";
+    }
+    else if(i%3==0){
         console.log("Fizz");
         document.getElementById("Fizz").innerHTML+="Fizz<br>";
     }
@@ -8,9 +12,9 @@ for(let i=1; i<101;i++){
         document.getElementById("Fizz").innerHTML+="Buzz<br>";
     }
     else {
-        console.log(i);
-        document.getElementById("Fizz").innerHTML+=i+"<br>";
+        document.getElementById('Fizz').innerHTML+=i+"<br>";
     }
+
 }
 
 
@@ -24,5 +28,5 @@ for(let i=0; i<6;i++)
     
 }
 
-if()
+
 
