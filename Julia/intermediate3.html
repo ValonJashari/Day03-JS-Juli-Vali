@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Intermediate 3</title>
 </head>
 <body>
+
+    <div id="output"></div>
     
+    <script>
+        function stars(amount) {
+            let star = "";
+            for (let i = 0; i < amount; i++) {
+                star += "*";
+                // document.write(star + "<br>");
+                document.getElementById("output").innerHTML += star + "<br>";
+            }
+
+        }
+
+        stars(5);
+
+    </script>
 </body>
 </html>

@@ -41,13 +41,13 @@
 
             for (let i = 0; i < gradesArray.length; i++) {
                 document.write("<br>" + namesArray[i] + ": ");
-                if (gradesArray[i] <= 60) {
+                if (gradesArray[i] < 60) {
                     document.write("F <br>");
-                } else if (gradesArray[i] <= 70) {
+                } else if (gradesArray[i] < 70) {
                     document.write("D <br>");
-                } else if (gradesArray[i] <= 80) {
+                } else if (gradesArray[i] < 80) {
                     document.write("C <br>");
-                } else if (gradesArray[i] <= 90) {
+                } else if (gradesArray[i] < 90) {
                     document.write("B <br>");
                 } else {
                     document.write("A <br>");
@@ -60,10 +60,22 @@
             for (let i = 0; i < gradesArray.length; i++) {
                 sumGrades = sumGrades + gradesArray[i];            
             }
-
             let averageGrades = sumGrades / gradesArray.length;
+            let averageGradesDig = "";
+
+            if (averageGrades <= 60) {
+                averageGradesDig = "F";
+            } else if (averageGrades < 70) {
+                averageGradesDig = "D";
+            } else if (averageGrades < 80) {
+                averageGradesDig = "C";
+            } else if (averageGrades < 90) {
+                averageGradesDig = "B";
+            } else {
+                averageGradesDig = "A";
+            }
             
-            document.write("<br>on average " + averageGrades + " points");
+            document.write("<br>on average " + averageGrades + " points, which is grade " + averageGradesDig);
 
         }
 

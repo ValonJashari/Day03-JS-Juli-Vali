@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+        var result = prompt("type your name");
+
+        let students = ["John", "Jane", "Hedi"];
+        let mathGrades = [70, 85, 100];
+        let points = 0;
+
+        for (let i = 0; i < students.length; i++) {
+            if (result == students[i]) {
+                points = mathGrades[i];
+            }
+            
+            if (points < 60) {
+                document.getElementById("output").style.color = "red";
+            } else if (points < 70) {
+                document.getElementById("output").style.color = "yellow";
+            } else if (points < 100) {
+                document.getElementById("output").style.color = "green";
+            } else {
+                document.getElementById("output").style.color = "blue";
+            }
+        }
+
+        document.getElementById("output").innerHTML = result + " has reached " + points + " in Math this season."
+
+
+    </script>
+    
+</body>
+</html>
