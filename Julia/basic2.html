@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic 2</title>
+</head>
+<body>
+
+    <!-- # Basic Exercise 2 | Highest value in an array
+    Create a program to find the highest value in an array. 
+    E.g. If we have the following values 1, 7, -3, 9 we should only get the highest value, number 9. -->
+
+    
+    <script>
+
+        function highestValue(varOne, varTwo, varThree, varFour) {
+
+            var myArray = new Array();
+            myArray = [varOne, varTwo, varThree, varFour];
+
+            if (varOne >= varTwo && varOne >= varThree && varOne >= varFour) {
+                document.write("The highest value is: " + varOne + "<br>");
+            } else if (varTwo >= varOne && varTwo >= varThree && varTwo >= varFour) {
+                document.write("The highest value is: " + varTwo + "<br>");
+            } else if (varThree >= varOne && varThree >= varTwo && varThree >= varFour) {
+                document.write("The highest value is: " + varThree + "<br>");
+            } else {
+                document.write("The highest value is: " + varFour + "<br>");
+            }
+
+        }
+
+        highestValue(1, 7, -3, 9);
+        
+
+    </script>
+
+</body>
+</html>
