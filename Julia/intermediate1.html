@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate 1</title>
+</head>
+<body>
+    
+    <!-- # Exercise 1 | Compare two numbers
+
+
+    Create a JavaScript program that will show the average grade for each student. Here are the points for each student:
+
+    Martin = 76
+    Thomas = 85
+    Klaus = 65
+    Maria = 93
+    David = 81
+
+    Based on their points, output the grade, according to the following table:
+
+    < 60 F
+    < 70 D
+    < 80 C
+    < 90 B
+    < 100 A
+
+    Finally, calculate the class average and output it (e.g. if the class average is 74 points, their average grade will be C).
+     -->
+
+     <script>
+
+        function grades(Martin, Thomas, Klaus, Maria, David) {
+
+            let gradesArray = [Martin, Thomas, Klaus, Maria, David];
+            let namesArray = ["Martin", "Thomas", "Klaus", "Maria", "David"];
+
+            document.write("The grades are: " + gradesArray + "<br>");
+
+            for (let i = 0; i < gradesArray.length; i++) {
+                document.write("<br>" + namesArray[i] + ": ");
+                if (gradesArray[i] <= 60) {
+                    document.write("F <br>");
+                } else if (gradesArray[i] <= 70) {
+                    document.write("D <br>");
+                } else if (gradesArray[i] <= 80) {
+                    document.write("C <br>");
+                } else if (gradesArray[i] <= 90) {
+                    document.write("B <br>");
+                } else {
+                    document.write("A <br>");
+                }
+                
+            }
+            
+            
+            let sumGrades = 0;
+            for (let i = 0; i < gradesArray.length; i++) {
+                sumGrades = sumGrades + gradesArray[i];            
+            }
+
+            let averageGrades = sumGrades / gradesArray.length;
+            
+            document.write("<br>on average " + averageGrades + " points");
+
+        }
+
+        grades(76, 85, 65, 93, 81);
+
+     </script>
+
+</body>
+</html>
